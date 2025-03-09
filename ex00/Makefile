@@ -1,7 +1,10 @@
 NAME = ex00
 ex00= ex00
 
-SRC = 	main.cpp
+SRC = 	main.cpp \
+	Animal.cpp \
+	Dog.cpp \
+	Cat.cpp
 
 CXX = c++ 
 
