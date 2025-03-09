@@ -12,9 +12,8 @@ class Animal
 		Animal(Animal& copy);
 		Animal& operator=(Animal& copy);
 		~Animal();
-		virtual void	makeSound(void);
-		virtual std::string	get_name(void);
-		virtual void		set_name(std::string name);
+		virtual void		makeSound(void);
+		virtual std::string	getType(void);
 };
 
 #endif

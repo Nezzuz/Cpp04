@@ -2,6 +2,7 @@
 
 Animal::Animal()
 {
+	type = "notype";
 	std::cout << "Generic animal object created" << std::endl;
 }
 
@@ -29,7 +30,7 @@ void		Animal::makeSound(void)
 	std::cout << "Generic sound of a generic animal..." << std::endl;
 }
 
-std::string	Animal::get_name(void)
+std::string	Animal::getType(void)
 {
 	if (this->type)
 		return (this->type);
@@ -37,7 +38,6 @@ std::string	Animal::get_name(void)
 		return (NULL);
 }
 
-void		Animal::set_name(std::string name)
 {
 	this->type = name;
 }
