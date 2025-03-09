@@ -30,3 +30,7 @@ void	Dog::makeSound(void)
 	std::cout << "Dog making his sound" << std::endl;
 }
 
+std::string	Dog::getType(Dog& copy)
+{
+	return (this->type);
+}

@@ -25,8 +25,13 @@ Cat::~Cat()
 	std::cout << "Cat object destroyed" << std::endl;
 }
 
-void	Cat::makeSound(void)
+void		Cat::makeSound(void)
 {
 	std::cout << "Cat making his sound" << std::endl;
+}
+
+std::string	Cat::getType(Cat& copy)
+{
+	return (this->type);
 }
 

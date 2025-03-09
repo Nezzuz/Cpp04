@@ -38,6 +38,3 @@ std::string	Animal::getType(void)
 		return (NULL);
 }
 
-{
-	this->type = name;
-}
