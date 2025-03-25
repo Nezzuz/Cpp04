@@ -1,7 +1,7 @@
-#include <iostream>
-
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
+
+#include <iostream>
 
 class Animal
 {
@@ -11,9 +11,9 @@ class Animal
 		Animal();	
 		Animal(Animal& copy);
 		Animal& operator=(Animal& copy);
-		~Animal();
-		virtual void		makeSound(void);
-		virtual std::string	getType(void);
+		virtual ~Animal();
+		virtual void		makeSound(void) const;
+		virtual std::string	getType(void) const;
 };
 
 #endif

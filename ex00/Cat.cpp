@@ -11,11 +11,11 @@ Cat::Cat(Cat& copy)
 	*this = copy;
 }
 
-Cat::Cat& operator=(Cat& copy)
+Cat&	Cat::operator=(Cat& copy)
 {
 	if (this != &copy)
 	{
-		this->type = copy.type;
+		type = copy.type;
 	}
 	return (*this);
 }
@@ -25,13 +25,8 @@ Cat::~Cat()
 	std::cout << "Cat object destroyed" << std::endl;
 }
 
-void		Cat::makeSound(void)
+void		Cat::makeSound(void) const
 {
 	std::cout << "Cat making his sound" << std::endl;
-}
-
-std::string	Cat::getType(Cat& copy)
-{
-	return (this->type);
 }
 

@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
 class Dog : public Animal
 {
@@ -10,8 +10,7 @@ class Dog : public Animal
 		Dog(Dog& copy);
 		Dog& operator=(Dog& copy);
 		~Dog();
-		void		makeSound(void);
-		std::string	getType(Dog& copy);
+		virtual void		makeSound(void) const;
 };
 
 #endif

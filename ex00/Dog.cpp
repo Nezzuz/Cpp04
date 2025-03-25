@@ -11,11 +11,11 @@ Dog::Dog(Dog& copy)
 	*this = copy;
 }
 
-Dog::Dog& operator=(Dog& copy)
+Dog&	Dog::operator=(Dog& copy)
 {
 	if (this != &copy)
 	{
-		this->type = copy.type;
+		type = copy.type;
 	}
 	return (*this);
 }
@@ -25,12 +25,8 @@ Dog::~Dog()
 	std::cout << "Destroying a dog object" << std::endl;
 }
 
-void	Dog::makeSound(void)
+void	Dog::makeSound(void) const
 {
 	std::cout << "Dog making his sound" << std::endl;
 }
 
-std::string	Dog::getType(Dog& copy)
-{
-	return (this->type);
-}

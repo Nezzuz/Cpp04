@@ -4,7 +4,9 @@ ex00= ex00
 SRC = 	main.cpp \
 	Animal.cpp \
 	Dog.cpp \
-	Cat.cpp
+	Cat.cpp \
+	WrongCat.cpp \
+	WrongAnimal.cpp
 
 CXX = c++ 
 

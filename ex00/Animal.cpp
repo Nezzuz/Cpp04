@@ -11,7 +11,7 @@ Animal::Animal(Animal& copy)
 	*this = copy;
 }
 
-Animal::Animal& operator=(Animal& copy)
+Animal& Animal::operator=(Animal& copy)
 {
 	if (this != &copy)
 	{
@@ -25,14 +25,14 @@ Animal::~Animal()
 	std::cout << "Generic animal object destroyed" << std::endl;
 }
 
-void		Animal::makeSound(void)
+void		Animal::makeSound(void) const
 {
 	std::cout << "Generic sound of a generic animal..." << std::endl;
 }
 
-std::string	Animal::getType(void)
+std::string	Animal::getType(void) const
 {
-	if (this->type)
+	if (!this->type.empty())
 		return (this->type);
 	else
 		return (NULL);
