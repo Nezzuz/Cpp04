@@ -12,9 +12,16 @@ Brain::Brain(Brain& copy)
 
 Brain& Brain::operator=(Brain& copy)
 {
+	int	i;
+
 	if (this != &copy)
 	{
-		/* this->type = copy.type; */
+		i = 0;
+		while (i < 100)
+		{
+			this->ideas[i] = copy.ideas[i];
+			i++;
+		}
 	}
 	return (*this);
 }

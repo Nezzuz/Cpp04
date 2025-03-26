@@ -52,7 +52,6 @@ int	main(void)
 		generic[x] = new Dog;
 		x++;
 	}
-
 	x = 0;
 	while (x < n)
 	{
