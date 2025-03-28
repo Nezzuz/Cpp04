@@ -12,8 +12,10 @@ class WrongAnimal
 		WrongAnimal(WrongAnimal& copy);
 		WrongAnimal& operator=(WrongAnimal& copy);
 		virtual ~WrongAnimal();
-		virtual void		makeSound(void) const = 0;
-		virtual std::string	getType(void) const = 0;
+		virtual void		makeSound(void) const;
+		virtual std::string	getType(void) const;
+		/* virtual void		makeSound(void) const = 0; */
+		/* virtual std::string	getType(void) const = 0; */
 };
 
 #endif

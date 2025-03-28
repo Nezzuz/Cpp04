@@ -68,8 +68,9 @@ int	main(void)
 	WrongAnimal *test3 = new WrongCat();
 	delete test3;
 	/* Let's do the same in the WrongAnimal case */
-	/* WrongAnimal *test4 = new WrongAnimal(); */
-	/* delete test4; */
+	std::cout << "Now i'm initializing the no abstract version of the base class WrongAnimal, then i could change the hpp and set their methods as abstract to see clearly the difference" << std::endl;
+	WrongAnimal *test4 = new WrongAnimal();
+	delete test4;
 	
 	return (0);
 }
