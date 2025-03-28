@@ -14,7 +14,8 @@ class Cat : public Animal
 		Cat(Cat& copy);
 		Cat& operator=(Cat& copy);
 		~Cat();
-		void		makeSound(void) const = 0;
+		void		makeSound(void) const;
+		std::string	getType(void) const;
 };
 
 #endif
