@@ -14,7 +14,7 @@ class Cat : public Animal
 		Cat(Cat& copy);
 		Cat& operator=(Cat& copy);
 		~Cat();
-		void		makeSound(void) const;
+		void		makeSound(void) const = 0;
 };
 
 #endif

@@ -59,9 +59,17 @@ int	main(void)
 	/* 	x++; */
 	/* } */
 	 
-	std::cout << "\nHere i'll check that my copies are deep and not shallow: " << std::endl;
-	Dog test1;
-	std::cout << "\nNow the with the copy constructor..." << std::endl;
-	Dog testcpy(test1);
+	Animal *test1 = new Dog();
+	delete test1;
+	/* That should not compile. Let's check it out */
+	/* Animal *test2 = new Animal(); */
+	/* delete test2; */
+
+	WrongAnimal *test3 = new WrongCat();
+	delete test3;
+	/* Let's do the same in the WrongAnimal case */
+	/* WrongAnimal *test4 = new WrongAnimal(); */
+	/* delete test4; */
+	
 	return (0);
 }

@@ -35,8 +35,11 @@ void	Dog::makeSound(void) const
 	std::cout << "Dog making his sound" << std::endl;
 }
 
-std::string	Dog::getType(const Dog& copy) const
+std::string	Dog::getType(void) const
 {
-	return (this->type);
+	if (!this->type.empty())
+		return (this->type);
+	else
+		return (NULL);
 }
 
