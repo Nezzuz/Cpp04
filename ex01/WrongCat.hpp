@@ -2,8 +2,9 @@
 #define WRONGCAT_HPP
 
 #include <iostream>
+#include "WrongAnimal.hpp"
 
-class WrongCat
+class WrongCat : public WrongAnimal
 {
 	protected:
 		std::string	type;
