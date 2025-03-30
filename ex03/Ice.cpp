@@ -8,16 +8,16 @@ Ice::Ice()
 
 Ice::Ice(const Ice& tocopy)
 {
-	this = &tocopy;
+	*this = tocopy;
 }
 
 Ice& Ice::operator=(const Ice& takeattrsofthisone)
 {
-	if (*this != takeattrsofthisone)
+	if (this != &takeattrsofthisone)
 	{
 		this->_type = takeattrsofthisone._type;	
 	}
-	return (this);	
+	return (*this);	
 }
 
 Ice::~Ice()
@@ -25,17 +25,12 @@ Ice::~Ice()
 	std::cout << "Destroying an ice object" << std::endl;
 }
 
-std::string	Ice::getType(void)
-{
-	return (this->_type);
-}
-
-virtual Ice*	Ice::clone(void) const
+Ice*		Ice::clone(void) const
 {
 	return  (new Ice());
 }
 
-virtual void	Ice::use(ICharacter& target);
+void		Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.name  << " *" <<  std::endl;
 }

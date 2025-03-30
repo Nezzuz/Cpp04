@@ -8,16 +8,16 @@ Cure::Cure()
 
 Cure::Cure(const Cure& tocopy)
 {
-	this = &tocopy;	
+	*this = tocopy;	
 }
 
 Cure& Cure::operator=(const Cure& takeattrsofthisone)
 {
-	if (*this != tocopy)
+	if (this != &takeattrsofthisone)
 	{
-		this->_type = tocopy.type;
+		this->_type = takeattrsofthisone._type;
 	}
-	return (this);
+	return (*this);
 }
 
 Cure::~Cure()
@@ -25,17 +25,12 @@ Cure::~Cure()
 	std::cout << "Destrying cure " << this->_type << std::endl;
 }
 
-std::string	Cure::getType(void)
-{
-	return (this->_type);
-}
-
-virtual Cure*	Cure::clone(void) const
+Cure*		Cure::clone(void) const
 {
 	return  (new Cure());
 }
 
-virtual void	Cure::use(ICharacter& target);
+void		Cure::use(ICharacter& target)
 {
 	std::cout << "* heals " << target.name  << "'s wounds *" <<  std::endl;
 }

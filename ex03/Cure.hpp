@@ -8,4 +8,5 @@ class Cure : public AMateria
 		Cure(const Cure& tocopy);
 		Cure& operator=(const Cure& takeattrsofthisone);
 		~Cure();
+		Cure*	clone(void) const;
 };

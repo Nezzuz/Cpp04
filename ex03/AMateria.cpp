@@ -2,27 +2,27 @@
 
 AMateria::AMateria()
 {
-	this->_type = amateria;
+	this->_type = "amateria";
 	std::cout << "EXECUTING amaterias constructor" << std::endl;
 }
 
 AMateria::AMateria(const AMateria& other)
 {
-	this = &other;	
+	*this = other;	
 }
 
-AMateria::AMateria(const std::string type)
+AMateria::AMateria(const std::string& type)
 {
 	this->_type = type;
 }
 
-AMateria& operator=(const AMateria& copy)
+AMateria& AMateria::operator=(const AMateria& copy)
 {
-	if (*this != copy)
+	if (this != &copy)
 	{
 		this->_type = copy._type;
 	}
-	return (this);
+	return (*this);
 }
 
 AMateria::~AMateria()
@@ -30,17 +30,13 @@ AMateria::~AMateria()
 	std::cout << this->_type << " destructor called" << std::endl;
 }
 
-/* std::string 		AMateria::getType(void) */
-/* { */
-/* 	return (this->_type); */
-/* } */
-
-/* virtual AMateria*       AMateria::clone(void) const */
-/* { */
-/* 	return (new AMateria); */
-/* } */
-
-virtual void		AMateria::use(ICharacter& target);
+std::string const& 		AMateria::getType(void) const
 {
+	return (this->_type);
+}
+
+void				AMateria::use(ICharacter& target)
+{
+	std::cerr << "This will never be seen because an abstract class is not istantiable and ice and cure classes will modify this method" << std::endl;
 	return;
 }

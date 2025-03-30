@@ -8,4 +8,5 @@ class Ice : public AMateria
 		Ice(const Ice& tocopy);
 		Ice& operator= (const Ice& takeattrsofthisone);	
 		~Ice();
+		Ice*	clone(void) const;
 };
