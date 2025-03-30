@@ -1,9 +1,8 @@
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
-
+#pragma once
 #include <iostream>
+#include "WrongAnimal.hpp"
 
-class WrongCat
+class WrongCat : public WrongAnimal
 {
 	protected:
 		std::string	type;
@@ -15,5 +14,3 @@ class WrongCat
 		virtual void		makeSound(void) const;
 		virtual std::string	getType(void) const;
 };
-
-#endif
