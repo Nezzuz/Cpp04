@@ -32,3 +32,11 @@ void		Cat::makeSound(void) const
 	std::cout << "Cat making his sound" << std::endl;
 }
 
+std::string	Cat::getType(void) const
+{
+	if (!this->type.empty())
+		return (this->type);
+	else
+		return (NULL);
+}
+
