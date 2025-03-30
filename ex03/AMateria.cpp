@@ -30,17 +30,17 @@ AMateria::~AMateria()
 	std::cout << this->_type << " destructor called" << std::endl;
 }
 
-std::string 		AMateria::getType(void)
+/* std::string 		AMateria::getType(void) */
+/* { */
+/* 	return (this->_type); */
+/* } */
+
+/* virtual AMateria*       AMateria::clone(void) const */
+/* { */
+/* 	return (new AMateria); */
+/* } */
+
+virtual void		AMateria::use(ICharacter& target);
 {
-	return (this->_type);
+	return;
 }
-
-/* virtual AMateria*       AMateria::clone() const */
-/* { */
-/* 	return (this); */
-/* } */
-
-/* virtual void		AMateria::use(ICharacter& target); */
-/* { */
-/* 	return; */
-/* } */
