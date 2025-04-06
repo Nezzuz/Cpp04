@@ -5,8 +5,8 @@
 class Character : public ICharacter
 {
 	private:
-		Materia		_inventory[4];
-		std::string	_name;
+		Materia*		_inventory[4];
+		std::string		_name;
 	public:
 		Character();
 		Character(const std::string name);
