@@ -1,6 +1,10 @@
 #pragma once
 
 #include <iostream>
+/* #include "AMateria.hpp" */
+
+/* Inclusion adelantada de la clase AMateria */
+class AMateria;
 class ICharacter
 {
 	public:

@@ -9,4 +9,5 @@ class Cure : public AMateria
 		Cure& operator=(const Cure& takeattrsofthisone);
 		~Cure();
 		Cure*	clone(void) const;
+		void	use(ICharacter& target);
 };

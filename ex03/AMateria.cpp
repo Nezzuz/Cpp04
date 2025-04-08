@@ -37,6 +37,7 @@ std::string const& 		AMateria::getType(void) const
 
 void				AMateria::use(ICharacter& target)
 {
+	(void)target;
 	std::cerr << "This will never be seen because an abstract class is not istantiable and ice and cure classes will modify this method" << std::endl;
 	return;
 }

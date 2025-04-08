@@ -46,7 +46,12 @@ Character::~Character()
 	std::cout << "Characters destructor called" << std::endl;
 }
 
-Character::equip(AMateria* m)
+std::string	Character::getName(void) const
+{
+	return (this->_name);
+}
+
+void		Character::equip(AMateria* m)
 {
 	int	i;
 
@@ -59,7 +64,7 @@ Character::equip(AMateria* m)
 		std::cout << "All the slots are full, nothing else can be equiped" << std::endl;
 }
 
-Character::unequip(int idx)
+void		Character::unequip(int idx)
 {
 	if (this->_inventory[idx] != NULL)
 		this->_inventory[idx] = NULL;
@@ -67,7 +72,7 @@ Character::unequip(int idx)
 		std::cout << "Nothing to unequip on that index" << std::endl;
 }
 
-Character::use(int idx, Character& target)
+void		Character::use(int idx, Character& target)
 {
 	if (this->_inventory[idx] != NULL)	
 	{

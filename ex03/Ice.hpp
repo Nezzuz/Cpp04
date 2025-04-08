@@ -9,4 +9,5 @@ class Ice : public AMateria
 		Ice& operator= (const Ice& takeattrsofthisone);	
 		~Ice();
 		Ice*	clone(void) const;
+		void	use(ICharacter& target);
 };

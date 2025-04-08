@@ -10,6 +10,6 @@ class MateriaSource : public IMateriaSource
 		MateriaSource(const MateriaSource& copy);
 		MateriaSource& operator=(const MateriaSource& copy);
 		~MateriaSource();
-		void		learnMateria(AMateria*);
+		void		learnMateria(AMateria* m);
 		AMateria*	createMateria(std::string const& type);
-}
+};
