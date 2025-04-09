@@ -4,7 +4,9 @@ ex03= ex03
 SRC = 	main.cpp \
 	AMateria.cpp \
 	Cure.cpp \
-	Ice.cpp
+	Ice.cpp \
+	Character.cpp \
+	MateriaSource.cpp
 
 CXX = c++ 
 

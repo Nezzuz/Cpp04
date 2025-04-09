@@ -13,7 +13,7 @@ MateriaSource::MateriaSource(const MateriaSource& copy)
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& copy)
 {
-	if (this != copy)
+	if (this != &copy)
 	{
 		int	i;
 
@@ -34,7 +34,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& copy)
 	return (*this);
 }
 
-~MateriaSource::MateriaSource()
+MateriaSource::~MateriaSource()
 {
 	std::cout << "MateriaSources destructor called" << std::endl;
 }
@@ -62,5 +62,6 @@ AMateria*	MateriaSource::createMateria(std::string const& type)
 		i++;
 	}
 	std::cout << type << " type materia was not found" << std::endl;
+	return (NULL);
 }
 

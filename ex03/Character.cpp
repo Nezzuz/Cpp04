@@ -18,7 +18,7 @@ Character::Character(const Character& copy)
 
 Character& Character::operator=(const Character& copy)
 {
-	if (this != copy)
+	if (this != &copy)
 	{
 		int	i;
 
@@ -46,7 +46,7 @@ Character::~Character()
 	std::cout << "Characters destructor called" << std::endl;
 }
 
-std::string	Character::getName(void) const
+std::string const&	Character::getName(void) const
 {
 	return (this->_name);
 }
@@ -72,7 +72,7 @@ void		Character::unequip(int idx)
 		std::cout << "Nothing to unequip on that index" << std::endl;
 }
 
-void		Character::use(int idx, Character& target)
+void		Character::use(int idx, ICharacter& target)
 {
 	if (this->_inventory[idx] != NULL)	
 	{
